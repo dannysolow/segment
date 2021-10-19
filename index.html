@@ -49,7 +49,8 @@ Email: <input name="email" required="" size="60" type="email"/>
     // Identify call
     analytics.identify('12345', { 
       email: email, 
-      name: fullname 
+      name: fullname,
+      shoeType: shoeType
     }); 
     // Sign-up Track call
     analytics.track('user signed up', user, function() { 
