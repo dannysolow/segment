@@ -3,25 +3,15 @@
 
 <html> 
 <head> 
-<title>Home Questionnaire<span id="selection-marker-1" class="redactor-selection-marker"></span></title>
-  <script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="SqWi6LIMoVnmDcK3mNcJVV2maRj4zuUK";analytics.SNIPPET_VERSION="4.13.2";
-  analytics.load("SqWi6LIMoVnmDcK3mNcJVV2maRj4zuUK");
-  analytics.page();
-  }}();
-   </script>
+<title>Sneakerhead Signup<span id="selection-marker-1" class="redactor-selection-marker"></span></title>
 </head> 
 
 <body> 
-<h1>What is your favorite place to travel?</h1> 
-<p>I am building a directory of the sweetest travel destinations.</p> 
-
-<form name="travel" onsubmit="identify(event)"> What is your favorite travel destination? <input name="destination" required="" size="81" type="text"/> 
-<br><br><br> 
-Any recommendations (cool things to do, places to visit or restaurants to eat)? 
-<br><br> 
-<textarea cols="81" name="details" required="" rows="10"> </textarea> 
-<br><br> 
+<h1>Sign up for the latest information on sneaker drops!</h1> 
+<p>Enter your contact information if you would like to receive alerts about the best sneakers as soon as they drop.</p> 
+<!--Location for users to enter their information to receive the sneakerhead newsletter-->
+<form name="sneakersignup" onsubmit="identify(event)">
+<br>
 Name: <input name="fullname" required="" size="75" type="text"/> 
 <br><br> 
 Email: <input name="email" required="" size="75" type="email"/> 
@@ -34,65 +24,59 @@ Email: <input name="email" required="" size="75" type="email"/>
     var form = e.target; 
     var email = form["email"].value; 
     var fullname = form["fullname"].value; 
-    var destination = form["destination"].value; 
-    var details = form["details"].value; 
     var user = { 
       email: email, 
-      name: fullname, 
-      destination: 
-      destination, 
-      details: details 
+      name: fullname
     }; 
-    // Placeholder for an Identify call
-    analytics.identify('1234', { 
-      email: email, 
-      name: fullname, 
-      userId: email
-    }); 
-    // Placeholder for a Track call
-    analytics.track('destination submitted', user, function() { 
-      window.location.href = ""; 
-    });
-
-    // // Ecommerce Events
+    // Identify call
+//     analytics.identify('12345', { 
+//       email: email, 
+//       name: fullname 
+//     }); 
+    // Sign-up Track call
+//     analytics.track('user signed up', user, function() { 
+//       window.location.href = ""; 
+//     });
+// // Ecommerce Events
     // analytics.track('Products Searched', { 
-    //  query: 'monopoly' 
+    //  query: 'kith air force 1' 
     // });
 
     // analytics.track('Product List Viewed', { 
-    //   list_id: 'hot_deals_1', 
-    //   category: 'Deals', 
+    //   list_id: 'hot_sneakers_2021', 
+    //   category: 'Trendy', 
     //   products: [ { 
     //     product_id: '507f1f77bcf86cd799439011', 
     //     sku: '45790-32', 
-    //     name: 'Monopoly: 3rd Edition', 
-    //     price: 19, 
+    //     name: 'Air Jordan 4 - White / Military Blue - Fire Red', 
+    //     price: 500.00, 
     //     position: 1, 
-    //     category: 'Games', 
+    //     category: 'Jordan', 
     //     url: 'https://www.example.com/product/path', 
     //     image_url: 'https://www.example.com/product/path.jpg' 
     //   }, { 
     //     product_id: '505bd76785ebb509fc183733', 
     //     sku: '46493-32', 
-    //     name: 'Uno Card Game', 
-    //     price: 3, 
+    //     name: 'Kith x Nike Air Force 1 “NYC”', 
+    //     price: 1000.00, 
     //     position: 2, 
-    //     category: 'Games' 
+    //     category: 'Air Force 1' 
     // } ] });
 
     // analytics.track('Product Viewed', {
     //   product_id: '507f1f77bcf86cd799439011',
     //   sku: 'G-32',
-    //   category: 'Games',
-    //   name: 'Monopoly: 3rd Edition',
-    //   brand: 'Hasbro',
-    //   variant: '200 pieces',
-    //   price: 18.99,
+    //   category: 'Jordan',
+    //   name: 'Air Jordan 4 - White / Military Blue - Fire Red',
+    //   brand: 'Nike',
+    //   variant: 'November 2019',
+    //   price: 500.00,
     //   quantity: 1,
-    //   coupon: 'MAYDEALS',
+    //   coupon: 'First_Purchase',
     //   currency: 'usd',
-    //   position: 3,
-    //   value: 18.99,
+    //   position: 2,
+    //   value: 500,
+    //   last_name: 'Bowerman',
     //   url: 'https://www.example.com/product/path',
     //   image_url: 'https://www.example.com/product/path.jpg'
     // });
@@ -101,14 +85,14 @@ Email: <input name="email" required="" size="75" type="email"/>
     //   cart_id: 'skdjsidjsdkdj29j',
     //   product_id: '507f1f77bcf86cd799439011',
     //   sku: 'G-32',
-    //   category: 'Games',
-    //   name: 'Monopoly: 3rd Edition',
-    //   brand: 'Hasbro',
-    //   variant: '200 pieces',
-    //   price: 18.99,
+    //   category: 'Jordan',
+    //   name: 'Air Jordan 4 - White / Military Blue - Fire Red',
+    //   brand: 'Nike',
+    //   variant: 'November 2019',
+    //   price: 500.00,
     //   quantity: 1,
-    //   coupon: 'MAYDEALS',
-    //   position: 3,
+    //   coupon: 'First_Purchase',
+    //   position: 2,
     //   url: 'https://www.example.com/product/path',
     //   image_url: 'https://www.example.com/product/path.jpg'
     // });
@@ -117,22 +101,22 @@ Email: <input name="email" required="" size="75" type="email"/>
     //   checkout_id: 'fksdjfsdjfisjf9sdfjsd9f',
     //   order_id: '50314b8e9bcf000000000000',
     //   affiliation: 'Google Store',
-    //   total: 27.50,
-    //   subtotal: 22.50,
-    //   revenue: 25.00,
-    //   shipping: 3,
-    //   tax: 2,
-    //   discount: 2.5,
-    //   coupon: 'hasbros',
+    //   total: 555.00,
+    //   subtotal: 500.00,
+    //   revenue: 525.00,
+    //   shipping: 35.00,
+    //   tax: 20.00,
+    //   discount: 30.00,
+    //   coupon: 'First_Purchase',
     //   currency: 'USD',
     //   products: [
     //     {
     //       product_id: '507f1f77bcf86cd799439011',
-    //       sku: '45790-32',
-    //       name: 'Monopoly: 3rd Edition',
-    //       price: 19,
+    //       sku: 'G-32',
+    //       name: 'Air Jordan 4 - White / Military Blue - Fire Red',
+    //       price: 500.00,
     //       quantity: 1,
-    //       category: 'Games',
+    //       category: 'Jordan',
     //       url: 'https://www.example.com/product/path',
     //       image_url: 'https:///www.example.com/product/path.jpg'
     //     }
