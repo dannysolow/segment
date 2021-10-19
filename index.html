@@ -41,6 +41,7 @@ Email: <input name="email" required="" size="60" type="email"/>
     var form = e.target; 
     var email = form["email"].value; 
     var fullname = form["fullname"].value; 
+    var type = form["shoe-type"].value;
     var user = { 
       email: email, 
       name: fullname
@@ -55,7 +56,7 @@ Email: <input name="email" required="" size="60" type="email"/>
       window.location.href = ""; 
     });
 // Ecommerce Events
-    analytics.track('Products Searched', { 
+   analytics.track('Products Searched', { 
      query: 'kith air force 1' 
     });
 
