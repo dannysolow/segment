@@ -23,8 +23,8 @@ Name: <input name="fullname" required="" size="60" type="text"/>
 Email: <input name="email" required="" size="60" type="email"/> 
 <br> <br>
 
-<label for="shoe-type">Preferred shoe</label>
-  <select id="shoe-type" name="shoe-type">
+<label for="shoeType">Preferred shoe</label>
+  <select id="shoeType" name="shoeType">
     <option value="Running">Running</option>
     <option value="Cross Trainers">Cross Trainers</option>
     <option value="Sports">Sports</option>
@@ -41,7 +41,7 @@ Email: <input name="email" required="" size="60" type="email"/>
     var form = e.target; 
     var email = form["email"].value; 
     var fullname = form["fullname"].value; 
-    var type = form["shoe-type"].value;
+    var shoeType = form["shoeType"].value;
     var user = { 
       email: email, 
       name: fullname
